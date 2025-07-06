@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Summary – Introduction to Statistical Learning</title>
+  <style>
+    /* ----------  BASIC LAYOUT  ---------- */
+    body{
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:#f4f6f8;
+      margin:0;
+      padding:48px 32px;
+      line-height:1.65;
+      color:#263238;
+    }
+    h1,h2,h3{color:#0d47a1;margin-top:0.2em}
+    a{color:#1565c0;text-decoration:none}
+    a:hover{text-decoration:underline}
+    /* ----------  CONTAINER / CARD  ---------- */
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:28px;
+      margin-bottom:40px;
+      box-shadow:0 3px 10px rgba(0,0,0,.08);
+    }
+    .chapter{border-left:6px solid #0d47a1;padding-left:18px}
+    .toc{background:#e3f2fd}
+    ul,ol{padding-left:24px}
+    footer{text-align:center;margin-top:60px;font-style:italic}
+  </style>
+</head>
+<body>
+
+<!-- ─────────────────────────   HEADER   ───────────────────────── -->
+<div class="card">
+  <h1>📘 An Introduction to Statistical Learning with Applications in Python</h1>
+  <p><strong>Name:</strong> Shyaka Kevin</p>
+  <p><strong>Student ID:</strong> 100915</p>
+  <p><strong>GitHub Labs (1&nbsp;–&nbsp;8):</strong>
+     <a href="https://github.com/shyakakevin/Data-Mining-Lab" target="_blank">
+       https://github.com/shyakakevin/Data-Mining-Lab
+     </a>
+  </p>
+</div>
+
+<!-- ─────────────────────────   OVERVIEW   ───────────────────────── -->
+<div class="card">
+  <h2>📚 Overview</h2>
+  <p>
+    <em>An Introduction to Statistical Learning</em> (ISLP) translates cutting‑edge statistical
+    and machine‑learning methods into Python‑based practice.  Covering regression,
+    classification, resampling, regularization, splines, tree ensembles, SVMs, and deep
+    networks, it balances mathematical intuition with hands‑on labs that use real data
+    such as <strong>Advertising</strong>, <strong>Boston Housing</strong>, <strong>Smarket</strong>, and <strong>Carseats</strong>.
+    The text highlights themes like the <strong>bias‑variance trade‑off</strong>,
+    <strong>model interpretability</strong>, and <strong>cross‑validation</strong>, positioning the reader to build
+    robust predictive models and understand their limitations.
+  </p>
+</div>
+
+<!-- ─────────────────────────   TABLE OF CONTENTS   ───────────────────────── -->
+<div class="card toc">
+  <h2>📖 Table of Contents</h2>
+  <ol>
+    <li><a href="#chapter1">Chapter 1 – Introduction</a></li>
+    <li><a href="#chapter2">Chapter 2 – Statistical Learning</a></li>
+    <li><a href="#chapter3">Chapter 3 – Linear Regression</a></li>
+    <li><a href="#chapter4">Chapter 4 – Classification</a></li>
+    <li><a href="#chapter5">Chapter 5 – Resampling Methods</a></li>
+    <li><a href="#chapter6">Chapter 6 – Linear Model Selection</a></li>
+    <li><a href="#chapter7">Chapter 7 – Moving Beyond Linearity</a></li>
+    <li><a href="#chapter8">Chapter 8 – Tree‑Based Methods</a></li>
+    <li><a href="#chapter9">Chapter 9 – Support Vector Machines</a></li>
+    <li><a href="#chapter10">Chapter 10 – Deep Learning</a></li>
+  </ol>
+</div>
+
+<!-- ─────────────────────────   CHAPTERS   ───────────────────────── -->
+
+<!-- Chapter 1 -->
+<div class="card chapter" id="chapter1">
+  <h2>📗 Chapter 1: Introduction</h2>
+  <p>
+    The opening chapter motivates <strong>statistical learning</strong> with three flagship datasets:
+    <em>Wage</em> (predicting salaries), <em>Smarket</em> (stock‑direction classification), and
+    <em>NCI60</em> (gene‑expression clustering).  It distinguishes <strong>supervised</strong> vs
+    <strong>unsupervised</strong> learning and clarifies <strong>regression</strong> versus
+    <strong>classification</strong> tasks.  Key ideas—<em>predictors</em> &amp; <em>response</em>, <em>training</em> vs
+    <em>test error</em>, <strong>overfitting</strong>, and the <strong>bias‑variance trade‑off</strong>—set the stage.  A
+    brief history references predecessors like ESL (2001) and ISLR (2013), emphasizing
+    Python’s growing role.  The chapter also outlines notation (vectors x, matrix X,
+    response y) and previews the book’s labs that rely on the <code>ISLP</code> package.
+  </p>
+  
+</div>
+
+<!-- Chapter 2 -->
+<div class="card chapter" id="chapter2">
+  <h2>📘 Chapter 2: Statistical Learning</h2>
+  <p>
+    Formalizes the supervised learning setup \(Y=f(X)+\varepsilon\).
+    Contrasts <strong>parametric</strong> models (linear regression) with
+    <strong>non‑parametric</strong> ones (K‑Nearest Neighbors).  Explores <strong>prediction</strong> vs
+    <strong>inference</strong>, introduces <strong>irreducible error</strong>, and quantifies performance via
+    <strong>Mean Squared Error (MSE)</strong> and <strong>classification error</strong>.  The
+    <em>Advertising</em> dataset illustrates how varying TV, radio, and newspaper budgets
+    affect sales.  Concepts like <em>training vs test error</em>, <strong>flexibility</strong>,
+    <strong>overfitting</strong>, and the <strong>bias–variance trade‑off</strong> guide model choice.  The Python
+    lab covers NumPy arrays, pandas DataFrames, plotting, and simple KNN fitting.
+  </p>
+  <p><strong>Lab:</strong> <a href="https://github.com/shyakakevin/Data-Mining-Lab/blob/main/Chapter%202.ipynb" target="_blank">Lab 2 – Statistical Learning</a></p>
+</div>
+
+<!-- Chapter 3 -->
+<div class="card chapter" id="chapter3">
+  <h2>📕 Chapter 3: Linear Regression</h2>
+  <p>
+    Details <strong>simple</strong> and <strong>multiple</strong> linear regression, coefficient estimation by
+    <em>least squares</em>, diagnostic tools (R², <em>Residual Standard Error</em>, F‑statistics),
+    and <strong>confidence intervals</strong>.  Demonstrates with the <em>Boston Housing</em> data,
+    incorporating quantitative and <strong>qualitative predictors</strong>, plus
+    <strong>interaction terms</strong> and <em>transforms</em> like \(X^2\) and \(\log X\).  Addresses
+    <strong>multicollinearity</strong>, <em>Variance Inflation Factor (VIF)</em>, and compares linear regression
+    against KNN on predictive accuracy.  Python labs use <code>statsmodels</code>,
+    design matrices, and residual plots to solidify concepts.
+  </p>
+  <p><strong>Lab:</strong> <a href="https://github.com/shyakakevin/Data-Mining-Lab/blob/main/Chapter%203.ipynb" target="_blank">Lab 3 – Linear Regression</a></p>
+</div>
+
+<!-- Chapter 4 -->
+<div class="card chapter" id="chapter4">
+  <h2>📙 Chapter 4: Classification</h2>
+  <p>
+    Presents <strong>Logistic Regression</strong>, <strong>LDA</strong>, <strong>QDA</strong>, <strong>Naive Bayes</strong>, and
+    <strong>KNN</strong>.  Introduces <strong>odds</strong>, <strong>log‑odds</strong>, <em>decision boundaries</em>, and the
+    <strong>Bayes Classifier</strong>.  Performance metrics include the
+    <em>confusion matrix</em>, <strong>accuracy</strong>, <strong>ROC curve</strong>, <strong>AUC</strong>,
+    <em>sensitivity</em>, and <em>specificity</em>.  Using the <em>Smarket</em> data, the text shows why linear
+    regression fails for categorical Y and how logistic regression captures
+    class probabilities.  Python labs leverage <code>sklearn.metrics</code> and ROC plotting.
+  </p>
+  <p><strong>Lab:</strong> <a href="https://github.com/shyakakevin/Data-Mining-Lab/blob/main/Chapter%204.ipynb" target="_blank">Lab 4 – Classification</a></p>
+</div>
+
+<!-- Chapter 5 -->
+<div class="card chapter" id="chapter5">
+  <h2>📒 Chapter 5: Resampling Methods</h2>
+  <p>
+    Explains the <strong>Validation‑Set Approach</strong>, <strong>LOOCV</strong>, and
+    <strong>k‑Fold Cross‑Validation</strong> for estimating test error, plus the
+    <strong>Bootstrap</strong> for assessing estimator variability.  Connects these ideas to the
+    <strong>bias‑variance trade‑off</strong> and model selection.  Practical examples, including
+    the <em>Auto MPG</em> data, show how CV guides polynomial degree choice.  Python
+    code employs <code>cross_val_score</code> and custom bootstrap loops.
+  </p>
+  <p><strong>Lab:</strong> <a href="https://github.com/shyakakevin/Data-Mining-Lab/blob/main/Chatper%205.ipynb" target="_blank">Lab 5 – Resampling</a></p>
+</div>
+
+<!-- Chapter 6 -->
+<div class="card chapter" id="chapter6">
+  <h2>📕 Chapter 6: Linear Model Selection &amp; Regularization</h2>
+  <p>
+    Introduces <strong>best‑subset</strong> and <strong>stepwise selection</strong>, then moves to
+    <strong>shrinkage</strong> via <strong>Ridge Regression</strong> and the <strong>Lasso</strong>, which performs
+    <em>automatic variable selection</em>.  Discusses <strong>Principal Components Regression
+    (PCR)</strong> and <strong>Partial Least Squares (PLS)</strong> for dimension reduction.  The
+    <em>Hitters</em> dataset illustrates how lasso’s \(L_1\) penalty zeros unimportant
+    coefficients, improving prediction and interpretability.  Python labs use
+    `sklearn.linear_model` and cross‑validation to tune the regularization
+    <em>tuning parameter</em> \(\lambda\).
+  </p>
+  
+</div>
+
+<!-- Chapter 7 -->
+<div class="card chapter" id="chapter7">
+  <h2>📗 Chapter 7: Moving Beyond Linearity</h2>
+  <p>
+    Explores <strong>Polynomial Regression</strong>, <strong>Step Functions</strong>, <strong>Regression Splines</strong>,
+    <strong>Smoothing Splines</strong>, <strong>Local Regression</strong>, and
+    <strong>Generalized Additive Models (GAMs)</strong>.  Concepts of <em>knots</em>, <em>basis
+    functions</em>, and <em>degrees of freedom</em> control flexibility.  The <em>Wage</em> data shows
+    how cubic splines capture the non‑linear wage‑age relationship better than
+    a straight line.  GAMs provide additive smooth terms plus interpretability.
+    Implementation uses `patsy` splines and <code>pygam</code> for automatic smoothing.
+  </p>
+  
+</div>
+
+<!-- Chapter 8 -->
+<div class="card chapter" id="chapter8">
+  <h2>📘 Chapter 8: Tree‑Based Methods</h2>
+  <p>
+    Starts with <strong>Decision Trees</strong> for regression and classification, explaining
+    <em>recursive binary splitting</em>, <strong>cost‑complexity pruning</strong>, and metrics like the
+    <strong>Gini index</strong>.  Ensemble methods follow: <strong>Bagging</strong> (bootstrap
+    aggregation), <strong>Random Forests</strong> (decorrelated trees via random feature
+    selection), and <strong>Boosting</strong> (sequentially improving <em>weak learners</em>).  The
+    <em>Carseats</em> data exemplifies how boosting lowers test error.  Labs rely on
+    `sklearn.tree`, `RandomForestClassifier`, and `GradientBoostingRegressor`.
+  </p>
+  <p><strong>Lab:</strong> <a href="https://github.com/shyakakevin/Data-Mining-Lab/blob/main/Chapter%208.ipynb" target="_blank">Lab 8 – Tree‑Based Methods</a></p>
+</div>
+
+<!-- Chapter 9 -->
+<div class="card chapter" id="chapter9">
+  <h2>📙 Chapter 9: Support Vector Machines</h2>
+  <p>
+    Builds from the <strong>Maximal Margin Classifier</strong> to <strong>Support Vector
+    Classifiers</strong> by allowing <em>soft margins</em>.  Introduces the <strong>kernel trick</strong> to create
+    non‑linear boundaries in high‑dimensional <em>feature space</em>, using
+    <strong>polynomial</strong> and <strong>radial basis</strong> kernels.  Key terms include <em>support
+    vectors</em>, <em>slack variables</em>, and the <em>tuning parameter</em> \(C\).  The <em>Heart Disease</em>
+    dataset demonstrates ROC optimization and multi‑class extensions
+    (“one‑vs‑one”, “one‑vs‑all”) via scikit‑learn’s <code>SVC</code>.
+  </p>
+  <p><strong>Lab:</strong> <a href="https://github.com/shyakakevin/Data-Mining-Lab/blob/main/Chapter%209.ipynb">Lab 9 – SVM (coming soon)</a></p>
+</div>
+
+<!-- Chapter 10 -->
+<div class="card chapter" id="chapter10">
+  <h2>📕 Chapter 10: Deep Learning</h2>
+  <p>
+    Covers <strong>feed‑forward neural networks</strong>, <strong>backpropagation</strong>,
+    <strong>activation functions</strong> (ReLU, sigmoid), <strong>regularization</strong> (dropout,
+    weight decay), and optimization (SGD, Adam).  Specialized architectures—
+    <strong>Convolutional Neural Networks (CNNs)</strong> for images and
+    <strong>Recurrent Neural Networks (RNNs)</strong> for sequences—are introduced.  The
+    chapter explains <strong>over‑parameterization</strong> and <em>double‑descent</em>.  Hands‑on labs
+    classify digits with <em>MNIST</em> and sentiment with <em>IMDB</em>, using <code>tensorflow</code> /
+    <code>keras</code>.
+  </p>
+  
+</div>
+
+<!-- ─────────────────────────   ALGORITHMS   ───────────────────────── -->
+<div class="card">
+  <h2>🧠 Algorithms by Task</h2>
+
+  <h3>🔵 Regression</h3>
+  <ul>
+    <li>Simple / Multiple Linear Regression</li>
+    <li>Polynomial Regression &amp; Splines</li>
+    <li>Ridge Regression &amp; Lasso</li>
+    <li>Generalized Additive Models (GAMs)</li>
+    <li>Regression Trees &amp; Random Forests</li>
+  </ul>
+
+  <h3>🟢 Classification</h3>
+  <ul>
+    <li>Logistic Regression</li>
+    <li>LDA / QDA</li>
+    <li>K‑Nearest Neighbors (KNN)</li>
+    <li>Classification Trees &amp; Boosting</li>
+    <li>Support Vector Machines (SVM)</li>
+    <li>Neural Networks &amp; CNNs</li>
+  </ul>
+
+  <h3>🟣 Unsupervised Learning</h3>
+  <ul>
+    <li>Principal Component Analysis (PCA)</li>
+    <li>K‑Means &amp; Hierarchical Clustering</li>
+    <li>Autoencoder Embeddings</li>
+  </ul>
+</div>
+
+<!-- ─────────────────────────   FOOTER   ───────────────────────── -->
+<footer>
+  Prepared by Shyaka Kevin – MSc Big Data Analytics – July 2025
+</footer>
+
+</body>
+</html>
